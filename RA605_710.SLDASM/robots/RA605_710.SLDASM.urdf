@@ -1,20 +1,20 @@
 <robot
-  name="RA605_710">
+  name="RA605_710.SLDASM">
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="-0.00322329614662994 -0.005 4.32638133916442E-16"
+        xyz="-0.0032233 -0.005 4.3569E-16"
         rpy="0 0 0" />
       <mass
-        value="39.9992146018366" />
+        value="39.999" />
       <inertia
-        ixx="13.3336666552129"
-        ixy="2.18068724778341E-19"
-        ixz="-2.73645750664298E-15"
-        iyy="26.6666666568492"
-        iyz="-4.57489937427496E-14"
-        izz="13.3336666552129" />
+        ixx="13.334"
+        ixy="2.1807E-19"
+        ixz="-2.7365E-15"
+        iyy="26.667"
+        iyz="-4.5749E-14"
+        izz="13.334" />
     </inertial>
     <visual>
       <origin
@@ -22,12 +22,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://RA605_710/meshes/base_link.STL" />
+          filename="package://RA605_710.SLDASM/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -36,7 +36,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://RA605_710/meshes/base_link.STL" />
+          filename="package://RA605_710.SLDASM/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -62,7 +62,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://RA605_710/meshes/Link1.STL" />
+          filename="package://RA605_710.SLDASM/meshes/Link1.STL" />
       </geometry>
       <material
         name="">
@@ -76,7 +76,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://RA605_710/meshes/Link1.STL" />
+          filename="package://RA605_710.SLDASM/meshes/Link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -115,7 +115,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://RA605_710/meshes/Link2.STL" />
+          filename="package://RA605_710.SLDASM/meshes/Link2.STL" />
       </geometry>
       <material
         name="">
@@ -129,21 +129,26 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://RA605_710/meshes/Link2.STL" />
+          filename="package://RA605_710.SLDASM/meshes/Link2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
     name="j2"
-    type="continuous">
+    type="revolute">
     <origin
       xyz="0 0.227 0"
-      rpy="1.5707963267949 -1.22460635382238E-16 -3.14159265358979" />
+      rpy="1.5708 -1.2246E-16 -3.1416" />
     <parent
       link="Link1" />
     <child
       link="Link2" />
     <axis
       xyz="0 0 1" />
+    <limit
+      lower="-3.1"
+      upper="3.1"
+      effort="0"
+      velocity="0" />
   </joint>
 </robot>
