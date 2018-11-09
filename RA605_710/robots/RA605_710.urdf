@@ -4,17 +4,17 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="0.00322329614662995 4.34882897851135E-16 -0.005"
+        xyz="-0.00322329614662994 -0.005 4.32638133916442E-16"
         rpy="0 0 0" />
       <mass
         value="39.9992146018366" />
       <inertia
         ixx="13.3336666552129"
-        ixy="2.73645750664298E-15"
-        ixz="-2.18068724783876E-19"
-        iyy="13.3336666552129"
-        iyz="-4.65653775686255E-14"
-        izz="26.6666666568492" />
+        ixy="2.18068724778341E-19"
+        ixz="-2.73645750664298E-15"
+        iyy="26.6666666568492"
+        iyz="-4.57489937427496E-14"
+        izz="13.3336666552129" />
     </inertial>
     <visual>
       <origin
@@ -41,10 +41,10 @@
     </collision>
   </link>
   <link
-    name="Empty_Link">
+    name="Link1">
     <inertial>
       <origin
-        xyz="-0.0032233 -0.005 3.7852E-16"
+        xyz="-0.0032233 -0.005 3.797E-16"
         rpy="0 0 0" />
       <mass
         value="39.999" />
@@ -62,7 +62,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://RA605_710/meshes/Empty_Link.STL" />
+          filename="package://RA605_710/meshes/Link1.STL" />
       </geometry>
       <material
         name="">
@@ -76,21 +76,74 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://RA605_710/meshes/Empty_Link.STL" />
+          filename="package://RA605_710/meshes/Link1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="joint1"
+    name="j1"
     type="fixed">
     <origin
       xyz="0 0 0"
-      rpy="0 -1.22460635382238E-16 3.14159265358979" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
-      link="Empty_Link" />
+      link="Link1" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Link2">
+    <inertial>
+      <origin
+        xyz="0.0032233 3.7961E-16 -0.232"
+        rpy="0 0 0" />
+      <mass
+        value="39.999" />
+      <inertia
+        ixx="13.334"
+        ixy="1.8504E-15"
+        ixz="-9.0784E-18"
+        iyy="13.334"
+        iyz="-4.6552E-14"
+        izz="26.667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RA605_710/meshes/Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RA605_710/meshes/Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j2"
+    type="continuous">
+    <origin
+      xyz="0 0.227 0"
+      rpy="1.5707963267949 -1.22460635382238E-16 -3.14159265358979" />
+    <parent
+      link="Link1" />
+    <child
+      link="Link2" />
+    <axis
+      xyz="0 0 1" />
   </joint>
 </robot>
