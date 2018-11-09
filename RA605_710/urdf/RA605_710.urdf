@@ -1,0 +1,96 @@
+<robot
+  name="RA605_710">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00322329614662995 4.34882897851135E-16 -0.005"
+        rpy="0 0 0" />
+      <mass
+        value="39.9992146018366" />
+      <inertia
+        ixx="13.3336666552129"
+        ixy="2.73645750664298E-15"
+        ixz="-2.18068724783876E-19"
+        iyy="13.3336666552129"
+        iyz="-4.65653775686255E-14"
+        izz="26.6666666568492" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RA605_710/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RA605_710/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Empty_Link">
+    <inertial>
+      <origin
+        xyz="-0.0032233 -0.005 3.7852E-16"
+        rpy="0 0 0" />
+      <mass
+        value="39.999" />
+      <inertia
+        ixx="13.334"
+        ixy="9.0784E-18"
+        ixz="-1.8504E-15"
+        iyy="26.667"
+        iyz="-4.5736E-14"
+        izz="13.334" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RA605_710/meshes/Empty_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RA605_710/meshes/Empty_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 -1.22460635382238E-16 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="Empty_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>
