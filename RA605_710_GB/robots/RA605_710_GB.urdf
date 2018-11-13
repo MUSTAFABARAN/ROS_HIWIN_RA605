@@ -1,20 +1,20 @@
 <robot
   name="RA605_710_GB">
   <link
-    name="base_link">
+    name="base">
     <inertial>
       <origin
-        xyz="0.00322329614662995 4.35236639886933E-16 -0.005"
+        xyz="0.0032233 4.3451E-16 -0.005"
         rpy="0 0 0" />
       <mass
-        value="39.9992146018366" />
+        value="100" />
       <inertia
-        ixx="13.3336666552129"
-        ixy="2.73645750664298E-15"
-        ixz="-2.18068724783876E-19"
-        iyy="13.3336666552129"
-        iyz="-4.65653775686255E-14"
-        izz="26.6666666568492" />
+        ixx="13.334"
+        ixy="2.7365E-15"
+        ixz="-2.1807E-19"
+        iyy="13.334"
+        iyz="-4.6565E-14"
+        izz="26.667" />
     </inertial>
     <visual>
       <origin
@@ -22,12 +22,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://RA605_710_GB/meshes/base_link.STL" />
+          filename="package://RA605_710_GB/meshes/base.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -36,7 +36,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://RA605_710_GB/meshes/base_link.STL" />
+          filename="package://RA605_710_GB/meshes/base.STL" />
       </geometry>
     </collision>
   </link>
@@ -44,17 +44,17 @@
     name="base_Link">
     <inertial>
       <origin
-        xyz="-0.0197115625412548 0.118584097089081 0.00272663309408005"
+        xyz="-0.02083 0.11878 0.0026698"
         rpy="0 0 0" />
       <mass
-        value="50.6963005253788" />
+        value="50.478" />
       <inertia
-        ixx="16.5548968121191"
-        ixy="0.532783129588136"
-        ixz="-0.00034057520373012"
-        iyy="26.9234564467821"
-        iyz="-0.0543017260136554"
-        izz="16.7157961544257" />
+        ixx="16.554"
+        ixy="0.5302"
+        ixz="0.0007393"
+        iyy="26.907"
+        iyz="-0.054433"
+        izz="16.7" />
     </inertial>
     <visual>
       <origin
@@ -67,7 +67,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -85,64 +85,11 @@
     type="fixed">
     <origin
       xyz="0 0 0"
-      rpy="1.5707963267949 0 3.14159265358979" />
+      rpy="1.5708 0 3.1416" />
     <parent
-      link="base_link" />
+      link="base" />
     <child
       link="base_Link" />
-    <axis
-      xyz="0 0 0" />
-  </joint>
-  <link
-    name="wire">
-    <inertial>
-      <origin
-        xyz="-0.0725051844188676 0.0266556692847321 0.0973200776244476"
-        rpy="0 0 0" />
-      <mass
-        value="0.21821313758791" />
-      <inertia
-        ixx="0.000930045437457021"
-        ixy="7.05554574080555E-08"
-        ixz="-0.0003344023473386"
-        iyy="0.00124404162085488"
-        iyz="1.27872690899019E-07"
-        izz="0.000372837191484093" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://RA605_710_GB/meshes/wire.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://RA605_710_GB/meshes/wire.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="wire"
-    type="fixed">
-    <origin
-      xyz="0.14178 0.09965 0.088375"
-      rpy="0 -1.5708 0" />
-    <parent
-      link="base_Link" />
-    <child
-      link="wire" />
     <axis
       xyz="0 0 0" />
   </joint>
@@ -150,17 +97,17 @@
     name="Link2">
     <inertial>
       <origin
-        xyz="0.019712 0.0027266 -0.10842"
+        xyz="0.02083 0.0026698 -0.10822"
         rpy="0 0 0" />
       <mass
-        value="50.696" />
+        value="50.478" />
       <inertia
-        ixx="16.555"
-        ixy="0.00034058"
-        ixz="-0.53278"
-        iyy="16.716"
-        iyz="-0.054302"
-        izz="26.923" />
+        ixx="16.554"
+        ixy="-0.0007393"
+        ixz="-0.5302"
+        iyy="16.7"
+        iyz="-0.054433"
+        izz="26.907" />
     </inertial>
     <visual>
       <origin
@@ -191,7 +138,7 @@
     type="continuous">
     <origin
       xyz="0 0.227 0"
-      rpy="1.5707963267949 -1.22460635382238E-16 -3.14159265358979" />
+      rpy="1.5708 -1.2246E-16 -3.1416" />
     <parent
       link="base_Link" />
     <child
@@ -243,7 +190,7 @@
     name="joint3"
     type="continuous">
     <origin
-      xyz="0.033223 0 0.148"
+      xyz="0.03322329614663 0 0.148"
       rpy="0 0 0" />
     <parent
       link="Link2" />
@@ -256,17 +203,17 @@
     name="Link4">
     <inertial>
       <origin
-        xyz="-0.013512 0.0027266 -0.59642"
+        xyz="-0.012393 0.0026698 -0.59622"
         rpy="0 0 0" />
       <mass
-        value="50.696" />
+        value="50.478" />
       <inertia
-        ixx="16.555"
-        ixy="0.00034058"
-        ixz="-0.53278"
-        iyy="16.716"
-        iyz="-0.054302"
-        izz="26.923" />
+        ixx="16.554"
+        ixy="-0.0007393"
+        ixz="-0.5302"
+        iyy="16.7"
+        iyz="-0.054433"
+        izz="26.907" />
     </inertial>
     <visual>
       <origin
@@ -296,7 +243,7 @@
     name="joint4"
     type="continuous">
     <origin
-      xyz="0 0 0.34"
+      xyz="0 0 0.340000000000006"
       rpy="0 0 0" />
     <parent
       link="Link3" />
@@ -365,11 +312,11 @@
         xyz="0.03645 0.00025111 -0.016042"
         rpy="0 0 0" />
       <mass
-        value="1" />
+        value="2.6849E-06" />
       <inertia
         ixx="1.8401E-10"
-        ixy="7.8323E-26"
-        ixz="-4.0836E-27"
+        ixy="1.4069E-27"
+        ixz="-4.5866E-27"
         iyy="2.0089E-12"
         iyz="2.1784E-14"
         izz="1.8201E-10" />
